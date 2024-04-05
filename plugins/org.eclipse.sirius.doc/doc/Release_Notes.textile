@@ -4,6 +4,22 @@ h1. Release Notes for Sirius Desktop
 
 This document contains the release notes for recent major releases of Sirius. See also "the release notes from previous versions":Release_Notes_Previous.html for details about older releases.
 
+h2(#sirius7.4.2). Changes in Sirius  Desktop 7.4.2
+
+h3. User-Visible Changes
+
+h3. Specifier-Visible Changes
+
+h3. Developer-Visible Changes
+
+h4. Changes in @org.eclipse.sirius.diagram.elk@
+
+* <span class="label label-success">Added</span> A system property @org.eclipse.sirius.diagram.elk.targetFolderPath@ is now available to set the folder path where the diagram will be exported in "ELK Graph" format. Previously, this path was hard-coded to the Java temporary folder path @java.io.tmpdir@ (for example under Windows: @%USER%\AppData\Local\Temp@). If this property is not set (or is invalid), the Java temporary folder is used. The value of this system property can contains variables names, like in the definition of the workspace data folder in a launch configuration. For example:
+** @${container_loc}@: Returns the absolute file system path of the session's container (container of the AIRD * file),
+** @${project_loc}@: Returns the absolute file system path of a session's project,
+** or @${workspace_loc}@: Returns the absolute file system path of the workspace root.
+** **Warning:** If you use a the "VM arguments" field in the launch configuration, you must replace the @"$"@ by a @"%"@ to avoid a replacement of the variables during the launch (and not by ElkDiagramLayoutTracer during export).
+
 h2(#sirius7.4.1). Changes in Sirius  Desktop 7.4.1
 
 h3. User-Visible Changes
