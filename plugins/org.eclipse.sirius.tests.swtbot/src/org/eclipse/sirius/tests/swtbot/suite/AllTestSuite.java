@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2010, 2023 THALES GLOBAL SERVICES.
+ * Copyright (c) 2010, 2024 THALES GLOBAL SERVICES.
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
  * which accompanies this distribution, and is available at
@@ -50,6 +50,7 @@ import org.eclipse.sirius.tests.swtbot.editor.vsm.ViewpointSpecificationProjectC
 import org.eclipse.sirius.tests.swtbot.layout.BorderedNodeCopyPasteFormatTest;
 import org.eclipse.sirius.tests.swtbot.layout.ContainerAndNodeCopyPasteFormatTest;
 import org.eclipse.sirius.tests.swtbot.layout.ContainerDefaultSizeLayoutTest;
+import org.eclipse.sirius.tests.swtbot.layout.ELKDebugFeaturesTest;
 import org.eclipse.sirius.tests.swtbot.layout.EdgeAndPortStabilityOnSemanticChangeTest;
 import org.eclipse.sirius.tests.swtbot.layout.EdgeCopyPasteFormatTest;
 import org.eclipse.sirius.tests.swtbot.layout.EdgeLabelsAlignAndDistributeTests;
@@ -440,6 +441,7 @@ public class AllTestSuite extends TestCase {
         suite.addTestSuite(ResetOriginTest.class);
         suite.addTestSuite(LayoutStabilityOnManualRefreshTest.class);
         suite.addTestSuite(EdgeAndPortStabilityOnSemanticChangeTest.class);
+        suite.addTestSuite(ELKDebugFeaturesTest.class);
         suite.addTestSuite(SessionSaveableTest.class);
         suite.addTest(new JUnit4TestAdapter(DragAndDropFromControlledResourceTest.class));
         suite.addTestSuite(RoundedCornerRefreshTest.class);
