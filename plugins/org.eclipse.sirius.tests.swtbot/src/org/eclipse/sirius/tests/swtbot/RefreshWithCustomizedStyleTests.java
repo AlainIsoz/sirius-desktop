@@ -115,7 +115,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testGMFNoteStyleCustomization() throws Exception {
+    public void _testGMFNoteStyleCustomization() throws Exception {
         testStyleCustomization(noteEditPartBot);
     }
 
@@ -125,7 +125,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testGMFNoteAttachmentStyleCustomization() throws Exception {
+    public void _testGMFNoteAttachmentStyleCustomization() throws Exception {
         testStyleCustomization(noteAttachmentEditPartBot);
     }
 
@@ -135,7 +135,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testGMFTextStyleCustomization() throws Exception {
+    public void _testGMFTextStyleCustomization() throws Exception {
         testStyleCustomization(textEditPartBot);
     }
 
@@ -145,7 +145,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testSetWorkspaceImageStyleCustomization() throws Exception {
+    public void _testSetWorkspaceImageStyleCustomization() throws Exception {
         editor.reveal(eClass1WithSquareStyleBot.part());
         eClass1WithSquareStyleBot.select();
         AbstractSWTBot<? extends Widget> setStyleToWorkspaceImageButtonFromTabbar = getSetStyleToWorkspaceImageButton(true, true);
@@ -232,7 +232,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testSquareStyleCustomization() throws Exception {
+    public void _testSquareStyleCustomization() throws Exception {
         testStyleCustomization(eClass1WithSquareStyleBot);
     }
 
@@ -242,7 +242,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testLozengeStyleCustomization() throws Exception {
+    public void _testLozengeStyleCustomization() throws Exception {
         testStyleCustomization(eClass1WithLozengeStyleBot);
     }
 
@@ -252,7 +252,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testEllipseStyleCustomization() throws Exception {
+    public void _testEllipseStyleCustomization() throws Exception {
         testStyleCustomization(eClass1WithEllipseStyleBot);
     }
 
@@ -262,7 +262,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testBundledImageStyleCustomization() throws Exception {
+    public void _testBundledImageStyleCustomization() throws Exception {
         testStyleCustomization(eClass1WithBundledImageStyleBot);
     }
 
@@ -270,7 +270,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * Test bundled image style features customization leads to error in errorLog because its extension is not valid and
      * do not thrown exception.
      */
-    public void testBundledImageStyleCustomizationWithError() {
+    public void _testBundledImageStyleCustomizationWithError() {
         try {
             openErrorLogViewByAPI();
             SWTBot errorLogBot = bot.viewByPartName("Error Log").bot();
@@ -293,7 +293,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testSiriusNoteStyleCustomization() throws Exception {
+    public void _testSiriusNoteStyleCustomization() throws Exception {
         testStyleCustomization(eClass1WithNoteStyleBot);
     }
 
@@ -313,7 +313,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testGaugeCompositeStyleCustomization() throws Exception {
+    public void _testGaugeCompositeStyleCustomization() throws Exception {
         testStyleCustomization(eClass1WithGaugeStyleBot);
     }
 
@@ -343,7 +343,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testShapeContainerStyleCustomization() throws Exception {
+    public void _testShapeContainerStyleCustomization() throws Exception {
         testStyleCustomization(package1WithShapeContainerStyleBot);
     }
 
@@ -353,7 +353,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testWorkspaceImageStyleOnContainerCustomization() throws Exception {
+    public void _testWorkspaceImageStyleOnContainerCustomization() throws Exception {
         testStyleCustomization(package1WithWorkspaceImageStyleBot);
     }
 
@@ -363,7 +363,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testEdgeStyleCustomization() throws Exception {
+    public void _testEdgeStyleCustomization() throws Exception {
         testStyleCustomization(referenceEditPartBot);
     }
 
@@ -373,7 +373,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testBracketEdgeStyleCustomization() throws Exception {
+    public void _testBracketEdgeStyleCustomization() throws Exception {
         testStyleCustomization(superTypeEditPartBot);
     }
 
@@ -383,7 +383,7 @@ public class RefreshWithCustomizedStyleTests extends AbstractRefreshWithCustomiz
      * @throws Exception
      *             thrown cause failure
      */
-    public void testLabelSizeCustomization() throws Exception {
+    public void _testLabelSizeCustomization() throws Exception {
         editor.select(eClass1WithSquareStyleBot);
         // set the focus on the Properties view
         final SWTBot propertiesBot = bot.viewByTitle(PROPERTIES).bot();

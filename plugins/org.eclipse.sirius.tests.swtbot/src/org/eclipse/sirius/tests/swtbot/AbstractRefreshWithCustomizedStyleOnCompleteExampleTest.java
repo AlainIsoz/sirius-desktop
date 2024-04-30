@@ -144,6 +144,7 @@ import org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefConnectionEditPart
 import org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefEditPart;
 import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.keyboard.Keystrokes;
+import org.eclipse.swtbot.swt.finder.utils.Traverse;
 import org.eclipse.swtbot.swt.finder.waits.ICondition;
 import org.eclipse.swtbot.swt.finder.widgets.AbstractSWTBot;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotButton;
@@ -359,22 +360,33 @@ public class AbstractRefreshWithCustomizedStyleOnCompleteExampleTest extends Abs
                     }
                 } else if (feature == ViewpointPackage.Literals.BASIC_LABEL_STYLE__ICON_PATH) {
                     propertiesBot.bot().text().setText("/" + getProjectName() + "/" + NEW_IMAGE_NAME);
+                    takeScreenshot("afterWritingInPropertiesView1");
+                    propertiesBot.bot().text().traverse(Traverse.TAB_NEXT);
+                    propertiesBot.bot().text().pressShortcut(Keystrokes.CR);
                 } else if (feature == ViewpointPackage.Literals.BASIC_LABEL_STYLE__LABEL_COLOR || feature == DiagramPackage.Literals.BORDERED_STYLE__BORDER_COLOR
                         || feature == DiagramPackage.Literals.SHAPE_CONTAINER_STYLE__BACKGROUND_COLOR || feature == DiagramPackage.Literals.FLAT_CONTAINER_STYLE__BACKGROUND_COLOR
                         || feature == DiagramPackage.Literals.FLAT_CONTAINER_STYLE__FOREGROUND_COLOR || feature == DiagramPackage.Literals.ELLIPSE__COLOR
                         || feature == DiagramPackage.Literals.SQUARE__COLOR || feature == DiagramPackage.Literals.DOT__BACKGROUND_COLOR || feature == DiagramPackage.Literals.EDGE_STYLE__STROKE_COLOR
                         || feature == DiagramPackage.Literals.NOTE__COLOR || feature == DiagramPackage.Literals.BUNDLED_IMAGE__COLOR || feature == DiagramPackage.Literals.LOZENGE__COLOR) {
                     propertiesBot.bot().text().setText("100,100,100");
+                    takeScreenshot("afterWritingInPropertiesView2");
+                    propertiesBot.bot().text().traverse(Traverse.TAB_NEXT);
                 } else if (feature == DiagramPackage.Literals.BORDERED_STYLE__BORDER_SIZE_COMPUTATION_EXPRESSION) {
                     // FIXME VP-3559 : the customization of borderSize
                     // doesn't works because the
                     // borderSizeComputationExpression change doesn't
                     // update the borderSize attribute
                     propertiesBot.bot().text().setText("20");
+                    takeScreenshot("afterWritingInPropertiesView3");
+                    propertiesBot.bot().text().traverse(Traverse.TAB_NEXT);
                 } else if (feature.getEType() == EcorePackage.Literals.EINTEGER_OBJECT || feature.getEType() == EcorePackage.Literals.EINT) {
                     propertiesBot.bot().text().setText("20");
+                    takeScreenshot("afterWritingInPropertiesView3");
+                    propertiesBot.bot().text().traverse(Traverse.TAB_NEXT);
                 } else if (feature == DiagramPackage.Literals.WORKSPACE_IMAGE__WORKSPACE_PATH) {
                     propertiesBot.bot().text().setText("/" + getProjectName() + "/" + NEW_IMAGE_NAME);
+                    takeScreenshot("afterWritingInPropertiesView4");
+                    propertiesBot.bot().text().traverse(Traverse.TAB_NEXT);
                 }
             } else if (feature instanceof EReference) {
                 EReference eReference = (EReference) feature;
