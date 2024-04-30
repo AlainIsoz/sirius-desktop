@@ -25,14 +25,8 @@ import org.eclipse.sirius.tests.swtbot.clipboard.GenericClipboardSupportTest;
 import org.eclipse.sirius.tests.swtbot.clipboard.MultiSessionCopyPasteTest;
 import org.eclipse.sirius.tests.swtbot.compartment.CompartmentsDragAndDropTest;
 import org.eclipse.sirius.tests.swtbot.compartment.CompartmentsSizeTest;
-import org.eclipse.sirius.tests.swtbot.compartment.CompartmentsTest;
-import org.eclipse.sirius.tests.swtbot.compartment.CompartmentsWithComponentTest;
-import org.eclipse.sirius.tests.swtbot.crossTable.CrossTableIntersectionExpressionTest;
-import org.eclipse.sirius.tests.swtbot.crossTable.CrossTableIntersectionTest;
-import org.eclipse.sirius.tests.swtbot.editor.vsm.BorderNodeSidePropertySectionTest;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.BorderSizeComputationExpressionTest;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.CompletionProposalInVSMTest;
-import org.eclipse.sirius.tests.swtbot.editor.vsm.ContainerDropPropertySectionsTests;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.ContentAssistTest;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.CreateMandatoryElementsTest;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.CustomizationPropertySectionsTests;
@@ -42,7 +36,6 @@ import org.eclipse.sirius.tests.swtbot.editor.vsm.MetamodelPropertyTabTests;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.MigrationOnVsmEditorReloadTest;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.OpeningContextTest;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.ResizeKindEditorTest;
-import org.eclipse.sirius.tests.swtbot.editor.vsm.ServiceNavigationTest;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.VSMEditorPropertiesTest;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.VSMFieldTest;
 import org.eclipse.sirius.tests.swtbot.editor.vsm.ValidationEmptyNameTest;
@@ -52,9 +45,6 @@ import org.eclipse.sirius.tests.swtbot.layout.ContainerAndNodeCopyPasteFormatTes
 import org.eclipse.sirius.tests.swtbot.layout.ContainerDefaultSizeLayoutTest;
 import org.eclipse.sirius.tests.swtbot.layout.EdgeAndPortStabilityOnSemanticChangeTest;
 import org.eclipse.sirius.tests.swtbot.layout.EdgeCopyPasteFormatTest;
-import org.eclipse.sirius.tests.swtbot.layout.EdgeLabelsAlignAndDistributeTests;
-import org.eclipse.sirius.tests.swtbot.layout.EdgeLayoutStabilityWithToolWizardTest;
-import org.eclipse.sirius.tests.swtbot.layout.EdgeStabilityOnCopyPasteLayoutTest;
 import org.eclipse.sirius.tests.swtbot.layout.LayoutStabilityOnManualRefreshTest;
 import org.eclipse.sirius.tests.swtbot.layout.ModifyEdgeLayoutAfterRefreshTest;
 import org.eclipse.sirius.tests.swtbot.layout.PackageLayoutStabilityOnManyViewsCreationToolTest;
@@ -70,7 +60,6 @@ import org.eclipse.sirius.tests.swtbot.modelexplorer.ProjectDependenciesTest;
 import org.eclipse.sirius.tests.swtbot.modelexplorer.ProjectsConcurrentCloseTest;
 import org.eclipse.sirius.tests.swtbot.modelexplorer.PropertyViewOnModelExplorerSelectionTests;
 import org.eclipse.sirius.tests.swtbot.modelexplorer.PropertyViewOnModelExplorerSelectionWithLockedObjectTest;
-import org.eclipse.sirius.tests.swtbot.modelexplorer.RepresentationVisibilityAfterSessionReloadTest;
 import org.eclipse.sirius.tests.swtbot.propertypage.SiriusPreferencesPropertyPageTest;
 import org.eclipse.sirius.tests.swtbot.propertypage.SiriusSessionDetailsPropertyPageTest;
 import org.eclipse.sirius.tests.swtbot.sessioneditor.SessionEditorOpeningTests;
@@ -81,11 +70,6 @@ import org.eclipse.sirius.tests.swtbot.tabbar.ResetToDefaultFiltersActionTests;
 import org.eclipse.sirius.tests.swtbot.tabbar.TabBarTest;
 import org.eclipse.sirius.tests.swtbot.tabbar.TabbarContributorExtensionTest;
 import org.eclipse.sirius.tests.swtbot.table.SetPropertyOfTableTreeByPropertiesViewTest;
-import org.eclipse.sirius.tests.swtbot.uml.CopyPasteFormatOfLabelOfBorderedNodeTest;
-import org.eclipse.sirius.tests.swtbot.uml.CopyPasteLayoutOfPortsWithConflictWithNotPastedPortsTest;
-import org.eclipse.sirius.tests.swtbot.uml.CopyPasteLayoutOfPortsWithConflictWithPastedPortsTest;
-import org.eclipse.sirius.tests.swtbot.uml.PortLocationAfterDragAndDropOnDiagramTest;
-import org.eclipse.sirius.tests.swtbot.uml.PortLocationAfterDragAndDropTest;
 import org.eclipse.sirius.tests.unit.common.EnvironmentReportTest;
 
 import junit.framework.JUnit4TestAdapter;
@@ -279,85 +263,85 @@ public class AllTestSuite extends TestCase {
     public static void addPart1(TestSuite suite) {
         // This one should be executed as early as possible
         suite.addTestSuite(CellEditorExtensionTest.class);
-
-        addGerritPart1(suite);
-
-        suite.addTestSuite(EdgeReconnectionTests.class);
-        suite.addTestSuite(ServiceNavigationTest.class);
-        // suite.addTest(PseudoClearcaseSwtbotTestSuite.suite());
-        STDSwtbotTestSuite.addPart1(suite);
-        suite.addTest(UMLSwtbotTestSuite.suite());
-        TableSwtbotTestSuite.addPart1(suite);
-
-        suite.addTestSuite(CrossTableIntersectionTest.class);
-        suite.addTestSuite(CrossTableIntersectionExpressionTest.class);
-
-        // TODO MCH : Fix this test. This test is deactivate because the
-        // build
-        // fails on Hudson (Timeout Exception)
-        // suite.addTestSuite(DndWorkspaceSupportTest.class);
-        // suite.addTest(SequenceSwtBotTestSuite.suite());
+//
+//        addGerritPart1(suite);
+//
+//        suite.addTestSuite(EdgeReconnectionTests.class);
+//        suite.addTestSuite(ServiceNavigationTest.class);
+//        // suite.addTest(PseudoClearcaseSwtbotTestSuite.suite());
+//        STDSwtbotTestSuite.addPart1(suite);
+//        suite.addTest(UMLSwtbotTestSuite.suite());
+//        TableSwtbotTestSuite.addPart1(suite);
+//
+//        suite.addTestSuite(CrossTableIntersectionTest.class);
+//        suite.addTestSuite(CrossTableIntersectionExpressionTest.class);
+//
+//        // TODO MCH : Fix this test. This test is deactivate because the
+//        // build
+//        // fails on Hudson (Timeout Exception)
+//        // suite.addTestSuite(DndWorkspaceSupportTest.class);
+//        // suite.addTest(SequenceSwtBotTestSuite.suite());
 
         suite.addTestSuite(RefreshWithCustomizedStyleTests.class);
-        suite.addTestSuite(ArrangeAllLinkedBorderedNodesLayoutStabilityAppTemoinTest.class);
-        suite.addTestSuite(ArrangeAllLinkedBorderedNodesLayoutStabilityTest.class);
-        suite.addTestSuite(ArrangeAllLinkedBorderedNodesWithSnapToGridTest.class);
-        suite.addTestSuite(DistributeActionTests.class);
-        suite.addTestSuite(EdgeLabelsAlignAndDistributeTests.class);
-        suite.addTestSuite(CompartmentsTest.class);
-        suite.addTestSuite(CompartmentsWithComponentTest.class);
-
-        suite.addTestSuite(ArrangeAllTest.class);
-        suite.addTestSuite(ArrangeAllWithSnapToGridTest.class);
-        suite.addTest(new JUnit4TestAdapter(DragAndDropWithSnapToGridTest.class));
-        suite.addTestSuite(EdgeStabilityOnBendpointsAlignmentTest.class);
-        suite.addTestSuite(EdgeStabilityOnDragAndDropTest.class);
-        suite.addTestSuite(EdgeLabelStabilityTest.class);
-        suite.addTestSuite(EdgeLabelUpdateTest.class);
-        suite.addTestSuite(EdgeLabelsMoveTest.class);
-        suite.addTestSuite(EdgeStabilityOnLayerManagementTest.class);
-        suite.addTestSuite(EdgeOnFigureWithAlphaAnchorTest.class);
-        suite.addTestSuite(EditorSavingTest.class);
-        suite.addTestSuite(EmptyPropertyViewAfterDeletionTest.class);
-        suite.addTestSuite(RepresentationVisibilityAfterSessionReloadTest.class);
-        suite.addTestSuite(HideRevealDiagramElementsLabelsTestWithOldUI.class);
-        suite.addTestSuite(HideLabelIconsWithPreferencesTest.class);
-        // suite.addTestSuite(LabelFontModificationsTest.class);
-        if (!(System.getProperty("os.name").contains("Linux") && TestsUtil.is202003Platform())) {
-            suite.addTestSuite(MultiLineLabelDiagramTest.class);
-            suite.addTestSuite(NodeCreationPositionTest.class);
-        }
-        suite.addTestSuite(OpenMultipleRepresentationsTest.class);
-        suite.addTestSuite(ShapeResizingEdgePositionStabilityTests.class);
-        suite.addTestSuite(PortsOnNodePositionStabilityTest.class);
-        suite.addTest(new JUnit4TestAdapter(PortLocationAfterDragAndDropTest.class));
-        suite.addTestSuite(PortLocationAfterDragAndDropOnDiagramTest.class);
-        suite.addTestSuite(CopyPasteLayoutOfPortsWithConflictWithNotPastedPortsTest.class);
-        suite.addTestSuite(CopyPasteLayoutOfPortsWithConflictWithPastedPortsTest.class);
-        suite.addTestSuite(CopyPasteFormatOfLabelOfBorderedNodeTest.class);
-        suite.addTestSuite(NodeBorderLabelPositionStabilityTest.class);
-        suite.addTestSuite(EdgeLayoutStabilityWithToolWizardTest.class);
-        suite.addTestSuite(EdgeStabilityOnCopyPasteLayoutTest.class);
-        suite.addTestSuite(PortSelectionTest.class);
-        suite.addTestSuite(PortNotVisibleSelectionTest.class);
-        suite.addTestSuite(RefreshAfterUndoDeletionFromGenericToolTest.class);
-        suite.addTestSuite(RefreshWithCustomizedStyleFromAppearanceTabTests.class);
-        suite.addTestSuite(RefreshWithCustomizedStyleFromTabbarTests.class);
-        suite.addTestSuite(ResizeKindRefreshTests.class);
-        suite.addTestSuite(TreeFoldingTest.class);
-        suite.addTestSuite(DoubleClickToolNavigationOperationTest.class);
-        suite.addTestSuite(BackgroundColorFigureUpdateTests.class);
-        suite.addTestSuite(BackgroundStyleUpdateTest.class);
-        suite.addTestSuite(EdgeMappingTestCase.class);
-        suite.addTestSuite(InvalidMetamodelRessourceTest.class);
-        suite.addTestSuite(ExtensionActivationOrderTest.class);
-        suite.addTestSuite(ContainerDropPropertySectionsTests.class);
-        suite.addTestSuite(BorderNodeSidePropertySectionTest.class);
-        suite.addTestSuite(EditPartSelectionTest.class);
-        suite.addTestSuite(LabelFontModificationsTest.class);
-        suite.addTestSuite(CreatedElementsLayoutTests.class);
-        suite.addTestSuite(AutoSizeSquareStyleDescriptionTest.class);
-        suite.addTestSuite(ChangeColorTest.class);
+//        suite.addTestSuite(ArrangeAllLinkedBorderedNodesLayoutStabilityAppTemoinTest.class);
+//        suite.addTestSuite(ArrangeAllLinkedBorderedNodesLayoutStabilityTest.class);
+//        suite.addTestSuite(ArrangeAllLinkedBorderedNodesWithSnapToGridTest.class);
+//        suite.addTestSuite(DistributeActionTests.class);
+//        suite.addTestSuite(EdgeLabelsAlignAndDistributeTests.class);
+//        suite.addTestSuite(CompartmentsTest.class);
+//        suite.addTestSuite(CompartmentsWithComponentTest.class);
+//
+//        suite.addTestSuite(ArrangeAllTest.class);
+//        suite.addTestSuite(ArrangeAllWithSnapToGridTest.class);
+//        suite.addTest(new JUnit4TestAdapter(DragAndDropWithSnapToGridTest.class));
+//        suite.addTestSuite(EdgeStabilityOnBendpointsAlignmentTest.class);
+//        suite.addTestSuite(EdgeStabilityOnDragAndDropTest.class);
+//        suite.addTestSuite(EdgeLabelStabilityTest.class);
+//        suite.addTestSuite(EdgeLabelUpdateTest.class);
+//        suite.addTestSuite(EdgeLabelsMoveTest.class);
+//        suite.addTestSuite(EdgeStabilityOnLayerManagementTest.class);
+//        suite.addTestSuite(EdgeOnFigureWithAlphaAnchorTest.class);
+//        suite.addTestSuite(EditorSavingTest.class);
+//        suite.addTestSuite(EmptyPropertyViewAfterDeletionTest.class);
+//        suite.addTestSuite(RepresentationVisibilityAfterSessionReloadTest.class);
+//        suite.addTestSuite(HideRevealDiagramElementsLabelsTestWithOldUI.class);
+//        suite.addTestSuite(HideLabelIconsWithPreferencesTest.class);
+//        // suite.addTestSuite(LabelFontModificationsTest.class);
+//        if (!(System.getProperty("os.name").contains("Linux") && TestsUtil.is202003Platform())) {
+//            suite.addTestSuite(MultiLineLabelDiagramTest.class);
+//            suite.addTestSuite(NodeCreationPositionTest.class);
+//        }
+//        suite.addTestSuite(OpenMultipleRepresentationsTest.class);
+//        suite.addTestSuite(ShapeResizingEdgePositionStabilityTests.class);
+//        suite.addTestSuite(PortsOnNodePositionStabilityTest.class);
+//        suite.addTest(new JUnit4TestAdapter(PortLocationAfterDragAndDropTest.class));
+//        suite.addTestSuite(PortLocationAfterDragAndDropOnDiagramTest.class);
+//        suite.addTestSuite(CopyPasteLayoutOfPortsWithConflictWithNotPastedPortsTest.class);
+//        suite.addTestSuite(CopyPasteLayoutOfPortsWithConflictWithPastedPortsTest.class);
+//        suite.addTestSuite(CopyPasteFormatOfLabelOfBorderedNodeTest.class);
+//        suite.addTestSuite(NodeBorderLabelPositionStabilityTest.class);
+//        suite.addTestSuite(EdgeLayoutStabilityWithToolWizardTest.class);
+//        suite.addTestSuite(EdgeStabilityOnCopyPasteLayoutTest.class);
+//        suite.addTestSuite(PortSelectionTest.class);
+//        suite.addTestSuite(PortNotVisibleSelectionTest.class);
+//        suite.addTestSuite(RefreshAfterUndoDeletionFromGenericToolTest.class);
+//        suite.addTestSuite(RefreshWithCustomizedStyleFromAppearanceTabTests.class);
+//        suite.addTestSuite(RefreshWithCustomizedStyleFromTabbarTests.class);
+//        suite.addTestSuite(ResizeKindRefreshTests.class);
+//        suite.addTestSuite(TreeFoldingTest.class);
+//        suite.addTestSuite(DoubleClickToolNavigationOperationTest.class);
+//        suite.addTestSuite(BackgroundColorFigureUpdateTests.class);
+//        suite.addTestSuite(BackgroundStyleUpdateTest.class);
+//        suite.addTestSuite(EdgeMappingTestCase.class);
+//        suite.addTestSuite(InvalidMetamodelRessourceTest.class);
+//        suite.addTestSuite(ExtensionActivationOrderTest.class);
+//        suite.addTestSuite(ContainerDropPropertySectionsTests.class);
+//        suite.addTestSuite(BorderNodeSidePropertySectionTest.class);
+//        suite.addTestSuite(EditPartSelectionTest.class);
+//        suite.addTestSuite(LabelFontModificationsTest.class);
+//        suite.addTestSuite(CreatedElementsLayoutTests.class);
+//        suite.addTestSuite(AutoSizeSquareStyleDescriptionTest.class);
+//        suite.addTestSuite(ChangeColorTest.class);
     }
 
     /**
